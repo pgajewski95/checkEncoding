@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>  <!-- polskie znaku -->
+    <title style="margin-left: 750px">Byte Conversion</title>
+
+
+</head>
+<body>
+<div>
+    <br>
+    <span style="color:black;  font-family: Arial, Helvetica, sans-serif;   font-size: 20px;   padding-top:111px;">
+			 Change Byte
+    </span>
+
+
+    <div style="margin-left: 750px">
+        <br>
+        <h1>Uwaga! Wszystkie pola muszą być wypełnione</h1>
+        <div class="font-input" style="font-size: 20px">
+            <form action="/">
+                <div class="title">Podaj adres pliku. Pamietaj ze format ma być np. C:\programFiles
+                    <br> <br>
+                    Adres
+                    <br>
+                    <input type="text" name="sciezka" th:text="${sciezka}">
+
+                </div>
+                <br> <br>
+                <div class="title">Podaj szukany plik wraz z rozszerzeniem przykład plik.rozszerzenie</div>
+
+
+                <input type="text" name="rozszerzenie" th:text="${rozszerzenie}">
+
+
+<!--                <div class="title">Podaj szukana wartość bajtu</div>-->
+<!--                <input type="number" name="bajt_wejsciowy" th:value="${bajt_wejsciowy}" max="127" min="-128"-->
+<!--                >-->
+<!--                <br><br>-->
+
+<!--                <div class="title">Podaj wartośc bajtu na która chcesz zamienic</div>-->
+<!--                <input type="number" name="bajt_wyjsciowy" th:value="${bajt_wyjsciowy}" max="127" min="-128"-->
+<!--                >-->
+
+
+<!--                <br><br>-->
+
+                <input type="submit" name="submit" value="Zamiana" class="btn-login"><br>
+            </form>
+            <div class="col-sm-12 text-right form-group">
+                <a class="col-sm-12 text-right form-group" th:href="@{/help}"><p class="card-text"> Pomoc<span
+                ></span></p></a>
+                <br>
+                </td>
+            </div>
+            <div class="col-sm-12 text-right form-group">
+                <a class="col-sm-12 text-right form-group" th:href="@{/checkByte}"><p class="card-text">Sprawdzenie
+                    bajtów<span
+                    ></span></p></a>
+                <br>
+                </td>
+            </div>
+            <div class="col-sm-12 text-right form-group">
+                <a class="col-sm-12 text-right form-group" th:href="@{/}"><p class="card-text">reset<span
+                ></span></p></a>
+                <br>
+                </td>
+            </div>
+
+            <p th:text="${change}" class="title"></p>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
