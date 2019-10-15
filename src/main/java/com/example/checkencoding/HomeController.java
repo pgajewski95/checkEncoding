@@ -18,7 +18,7 @@ public class HomeController {
 
         if (sciezka != null && rozszerzenie != null) {
             CheckEncoding checkEncoding = new CheckEncoding();
-            modelMap.put("change", "Bajty po zamianie: " + checkEncoding.getEncode(sciezka, rozszerzenie));
+            modelMap.put("change", " " + checkEncoding.getEncode(sciezka, rozszerzenie));
             modelMap.put("sciezka", sciezka);
             modelMap.put("rozszerzenie", rozszerzenie);
 

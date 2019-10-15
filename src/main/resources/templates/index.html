@@ -10,7 +10,7 @@
 <div>
     <br>
     <span style="color:black;  font-family: Arial, Helvetica, sans-serif;   font-size: 20px;   padding-top:111px;">
-			 Change Byte
+			 Check Encode
     </span>
 
 
@@ -27,10 +27,14 @@
 
                 </div>
                 <br> <br>
-                <div class="title">Podaj szukany plik wraz z rozszerzeniem przykład plik.rozszerzenie</div>
+                <div class="title">Wybierz rozszerzenie</div>
 
 
-                <input type="text" name="rozszerzenie" th:text="${rozszerzenie}">
+
+                <select name="rozszerzenie" id="rozszerzenie" style="text-transform:capitalize;">
+                    <option value=".txt" th:selected="${rozszerzenie=='.txt'}">txt</option>
+                    <option value=".html" th:selected="${rozszerzenie=='.html'}">html</option>
+                </select>
 
 
 <!--                <div class="title">Podaj szukana wartość bajtu</div>-->
@@ -45,7 +49,7 @@
 
 <!--                <br><br>-->
 
-                <input type="submit" name="submit" value="Zamiana" class="btn-login"><br>
+                <input type="submit" name="submit" value="Sprawdzenie" class="btn-login"><br>
             </form>
             <div class="col-sm-12 text-right form-group">
                 <a class="col-sm-12 text-right form-group" th:href="@{/help}"><p class="card-text"> Pomoc<span

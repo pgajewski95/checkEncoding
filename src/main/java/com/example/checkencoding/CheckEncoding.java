@@ -56,7 +56,7 @@ public class CheckEncoding {
         if (sciezka == null || rozszerzenie == null) {
             return "wrong input";
         }
-        String adres = sciezka + "\\" + rozszerzenie;
+        String adres = sciezka  + rozszerzenie;
 
         File plik = new File(adres);
         byte[] buf = new byte[4096];
